@@ -11,5 +11,9 @@ class LoginPageLocators():
     LOGIN_IN_URL = "login"
 
 
-class ProductPageLocators():
-    BUTTON_ADD_TO_CART = (By.CSS_SELECTOR, ".btn-add-to-basket")
+class ProductPageLocators:
+    ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, "button.btn-add-to-basket") # кнопка добавить в корзину
+    PRODUCT_NAME = (By.CSS_SELECTOR, "div.product_main h1") # Название товара из h1
+    PRODUCT_ADDED_MESSAGE = (By.CSS_SELECTOR, "div.alertinner strong") # название товара из уведомления
+    PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color") # ищем цену твоара на странице продукта
+    BASKET_TOTAL_MESSAGE = (By.CSS_SELECTOR, "div.alert-info strong") # цена товара из уведомления
