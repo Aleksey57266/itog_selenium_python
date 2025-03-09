@@ -17,3 +17,11 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text # ищем цену твоара на странице продукта
         basket_total = self.browser.find_element(*ProductPageLocators.BASKET_TOTAL_MESSAGE).text # цена товара из уведомления
         assert product_price in basket_total, f"Expected '{product_price}' to be in '{basket_total}'" # сравниваем
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Сообщение об успешном выполнении отображается, но его не должно быть"
+
+    def should_success_message_propal(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Сообщение об успешном выполнении отображается и не пропало"
