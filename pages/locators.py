@@ -18,3 +18,8 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color") # ищем цену твоара на странице продукта
     BASKET_TOTAL_MESSAGE = (By.CSS_SELECTOR, "div.alert-info strong") # цена товара из уведомления
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-safe.alert-noicon") # уведомление, успешного добавления в корзину
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
