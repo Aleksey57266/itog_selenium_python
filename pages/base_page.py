@@ -68,3 +68,7 @@ class BasePage():
         link.click()
         tabs = self.browser.window_handles
         self.browser.switch_to.window(tabs[-1])
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
